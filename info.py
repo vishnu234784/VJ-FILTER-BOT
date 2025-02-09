@@ -10,7 +10,7 @@ from Script import script
 id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
-SESSION = environ.get('SESSION', 'TechVJBot')
+SESSION = environ.get('SESSION', '')
 API_ID = int(environ.get('API_ID', '22602938'))
 API_HASH = environ.get('API_HASH', 'a196005616395c7622007d20505c5fdc')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
@@ -91,7 +91,7 @@ OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/VK_Entertainment_1')
 
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
-PM_SEARCH = bool(environ.get('PM_SEARCH', True))
+PM_SEARCH = bool(environ.get('PM_SEARCH', False))
 BUTTON_MODE = bool(environ.get('BUTTON_MODE', True))
 MAX_BTN = bool(environ.get('MAX_BTN', True))
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
@@ -162,11 +162,11 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://testofvjfilter-1fa60b1b8498.herokuapp.com/")
+URL = environ.get("URL", "")
 
 
 # Rename Info : If True Then Bot Rename File Else Not
-RENAME_MODE = bool(environ.get('RENAME_MODE', False)) # Set True or False
+RENAME_MODE = bool(environ.get('RENAME_MODE', True)) # Set True or False
 
 
 # Auto Approve Info : If True Then Bot Approve New Upcoming Join Request Else Not
